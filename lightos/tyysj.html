@@ -1,0 +1,35 @@
+﻿<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="15;url=login.html" />
+ </head>
+ <body>
+	<video id="videoID" controls="controls" style="width:500px">
+	  <source src="kj.mp4" type="video/mp4"/>
+	</video>
+	<br/><p>如果无法播放开机视频，请等待15秒自动开机</p>
+ </body>
+<script  type="text/javascript">
+	window.onload = function() {
+		var local1=document.getElementById('videoID');  
+		local1.autoplay = true; 
+		local1.muted=true; 
+		if(local1.paused){ 
+			local1.play(); 
+	    }else{		   
+			local1.pause();  
+	    }
+    }
+
+    function btn(){
+		var local=document.getElementById('videoID'); 
+		if(local.paused){ 
+			local.play();  
+	    }else{
+			local.pause(); 
+	    }
+	} 
+
+</script>
+</html>
